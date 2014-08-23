@@ -1,0 +1,16 @@
+{%- from 'repositorio/defaults.yaml' import rawmap with context -%}
+{%- set datamap = salt['grains.filter_by'](rawmap, merge=salt['pillar.get']('repositorio:lookup')) -%}
+
+RepositoryRoot = {{ datamap.docroot.path|default('/var/www/repo/') }}
+
+<Log4perl>
+  config = /etc/rex/log4perl.conf
+</Log4perl>
+
+{% for id, settings in salt['pillar.get']('repositorio:repos', {})|dictsort %}
+<Repository {{ id }}>
+  {%- for setting, value in settings|dictsort %}
+  {{ setting }} = {{ value }}
+  {%- endfor %}
+</Repository>
+{% endfor %}
