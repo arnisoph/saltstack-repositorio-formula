@@ -31,7 +31,7 @@ Available states
 
 ``repositorio``
 ~~~~~~~~~~~~~~~
-Install required packages for repository. Since it is a pain in the ass to install the CPAN packages by manually (there is no Salt CPAN execution module) installation of repositorio itself isn't yet implemented here.
+Install required packages for repositorio. Since it is a pain in the ass to install the CPAN packages manually (there is no Salt CPAN state module) installation of repositorio itself isn't yet implemented here.
 
 Additional resources
 --------------------
