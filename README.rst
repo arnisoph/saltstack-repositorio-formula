@@ -65,7 +65,6 @@ TODO
 * table/ matrix: os/salt compatibility (dedicated file)
 * add list of available states
 * add tests
-* install Rex::Repositorio itself
 
 
 Authors
