@@ -1,0 +1,67 @@
+kernel:
+  Linux:
+    config:
+      main:
+        path: /etc/rex/repositorio.conf
+      log4perl:
+        path: /etc/rex/log4perl.conf
+    docroot: {}
+    source:
+      baseurl: http://get.repositor.io/downloads/
+os_family:
+  Debian:
+    pkgs:
+      - createrepo
+      - libcommon-sense-perl
+      - libconfig-general-perl
+      - libfile-path-perl
+      - libio-all-perl
+      - libjson-xs-perl
+      - liblog-log4perl-perl
+      - libmojolicious-perl
+      - libmoose-perl
+      - libparams-validate-perl
+      - libperl-dev
+      - libterm-progressbar-perl
+      - libterm-readkey-perl
+      - libtest-simple-perl
+      - libtry-tiny-perl
+      - libwww-perl
+      - libxml-libxml-perl
+      - libxml-simple-perl
+      - make
+      - perl-modules
+      - wget
+    config:
+      manage:
+        - main
+        - log4perl
+  Redhat:
+    pkgs:
+      - createrepo
+      - make
+      - perl
+      - perl-Compress-Zlib
+      - perl-Config-General
+      - perl-Digest-SHA
+      - perl-ExtUtils-MakeMaker
+      - perl-IO-All
+      - perl-JSON-XS
+      - perl-Log-Log4perl
+      - perl-Mojolicious
+      - perl-Moose
+      - perl-Params-Validate
+      - perl-Term-ProgressBar
+      - perl-TermReadKey
+      - perl-Test-Simple
+      - perl-Try-Tiny
+      - perl-XML-LibXML
+      - perl-XML-Simple
+      - perl-common-sense
+      - perl-libwww-perl
+      - tar
+      - wget
+    config:
+      manage:
+        - main
+        - log4perl
